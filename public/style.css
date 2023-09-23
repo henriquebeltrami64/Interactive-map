@@ -1,0 +1,207 @@
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    top: 9.5%;
+    position: absolute;
+    left: 2px;
+    
+}
+.overlaybttn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 1rem !important; 
+    height: 1rem !important;
+}
+.bttnimage{
+    width: 3rem;
+    height: 3rem;
+    border: solid #0a1b2d;
+    border-radius: 50%;
+}
+
+.error-message{
+    color: red;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 7%;
+    left: 0;
+    background-color: #0a1b2d;
+    padding: 20px;
+    padding-top: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    overflow-y: auto;
+    align-items: center;
+    width: 20%;
+    height: 80%;
+}
+.close {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 50px;
+    color: #07c972;
+    cursor: pointer;
+}
+
+.search-box{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #0a1b2d;
+    height: 2.5rem;
+    padding:  0.625rem;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    right: 50px;
+}
+#countryInfo {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 5px; 
+    
+}
+
+#countryInfo h1 {
+    font-size: 40px;
+    margin-bottom: 10px; 
+}
+
+#countryInfo h2 {
+    font-size: 23px; 
+    margin-bottom: 8px;
+    font-weight: 600;
+ 
+}
+
+#countryInfo img {
+    max-width: 100%; 
+    height: auto; 
+}
+.countryimg{
+    position: absolute;
+    bottom: 1rem;
+    width: 80%; 
+    left: 0;
+    margin-left: 2.5rem;
+    border-radius: 20px;
+}
+
+.countryInput{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 2.5rem;
+    width: 100%;
+    transition: .5s;
+}
+
+::-webkit-input-placeholder{
+    color: #1e3754;
+}
+.search-button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #0a1b2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    border: none;
+    cursor: pointer;
+
+}
+
+@media (max-width: 1700px) {
+    
+    #countryInfo h1{
+        font-size: 2rem !important;
+    }
+    #countryInfo h2{
+        font-size: 1.3rem !important;
+    }
+    .overlay{
+        width: 30%;
+    }
+    
+}
+@media (max-width: 1350px) {
+    
+    #countryInfo h1{
+        font-size: 1.5rem;
+    }
+    #countryInfo h2{
+        font-size: 1.3rem !important;
+    }
+    .overlay{
+        padding: 10px;
+        width: 40%;
+    }
+    
+    
+}
+@media(max-width: 900px){
+    .overlay{
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .search-box{
+        margin-top: 2.7rem; 
+    }
+    #countryInfo h1{
+        font-size: 1rem;
+    }
+    #countryInfo h2{
+        font-size: 0.8rem !important;
+    }
+}
+@media(max-width: 400px){
+    .overlay{
+        width: 50% !important;
+    }
+    #countryInfo h1{
+        font-size: 0.8rem !important;
+    }
+    #countryInfo h2{
+        font-size: 0.6rem !important;
+    }
+    .search-box{
+        margin-top: 2.9rem; 
+    }
+    .countryimg{
+        margin-left: 1.3rem;
+    }
+}
